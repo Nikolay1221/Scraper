@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Зависимости для Selenium WebDriver
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.141.59'
+
+    // Зависимости для Jsoup
+    implementation group: 'org.jsoup', name: 'jsoup', version: '1.14.3'
+
+    // Зависимости для MongoDB
+    implementation group: 'org.mongodb', name: 'mongo-java-driver', version: '3.12.14'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+task runMyApp(type: JavaExec) {
+    main = 'org.example.Scraper' // Замените на полное имя вашего класса с методом main
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+test {
+    useJUnitPlatform()
+}
