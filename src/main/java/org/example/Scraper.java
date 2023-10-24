@@ -13,7 +13,7 @@ public class Scraper {
 
     public static void main(String[] args) {
         int numPagesToParse = 2;
-        System.setProperty("webdriver.chrome.driver", "/home/nilk/chromedriver-linux64/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "chromedriver-linux64/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
         WebDriver driver = new ChromeDriver(chromeOptions);
