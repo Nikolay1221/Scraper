@@ -18,7 +18,7 @@ public class Scraper {
         chromeOptions.addArguments("--headless");
         WebDriver driver = new ChromeDriver(chromeOptions);
 
-        String connectionString = "mongodb://localhost:27017";
+        String connectionString = "mongodb://10.128.0.29:27017";
         String dbName = "avito";
 
         MongoDBDatabase database = new MongoDBDatabase(connectionString, dbName);
