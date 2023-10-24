@@ -16,7 +16,6 @@ public class Scraper {
         System.setProperty("webdriver.chrome.driver", "chromedriver-linux64/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
-        chromeOptions.addArguments("--disable-gpu");
         WebDriver driver = new ChromeDriver();
 
         String connectionString = "mongodb://localhost:27017";
