@@ -90,13 +90,9 @@ public class Scraper {
             database.insertAd(ad, collectionName);
 
             try {
-                Thread.sleep(100); // Здесь 100 миллисекунд (0.1 секунды)
+                Thread.sleep(10000); // Здесь 10000 миллисекунд (10 секунд)
                 recordCount++;
-                if (recordCount >= 100000) {
-                    int tableIndex = recordCount / 200;
-                    collectionName = "smartphone_pricing_all_" + tableIndex;
-                    recordCount = 0;
-                }
+
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
