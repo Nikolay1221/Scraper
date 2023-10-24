@@ -17,7 +17,7 @@ public class Scraper {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--disable-gpu");
-        WebDriver driver = new ChromeDriver(chromeOptions);
+        WebDriver driver = new ChromeDriver();
 
         String connectionString = "mongodb://localhost:27017";
         String dbName = "avito";
